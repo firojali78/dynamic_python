@@ -9,7 +9,7 @@ from datetime import timedelta
 
 host = "imap.gmail.com"
 username = "firoja@valyoo.in"
-password = 'khan_786'
+password = '*******'
 #download_folder = "/Users/ayushmohanawasthi/IdeaProjects/Automation/automation/scm-automation-python/pdf"
 download_folder = "C:\Firoj"
 

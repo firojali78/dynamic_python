@@ -41,4 +41,4 @@ def login():
     return jsonify({a})
     #hitapi("C1114","1234")
 if __name__ == '__main__':
-    app.run(debug=True, port=2020)
+    app.run(debug=True, port=6262)
