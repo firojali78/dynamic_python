@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Navbar</title>
-</head>
-<body>
-
-</body>
-</html>
+<nav class="navbar" style="background-color: #6689EE;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#", style="color: #FFFFFF;">Welcome to BodyCare Web Application - Distributor Portal</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active", style="color: #FFFFFF;"><a href="{{ url_for('home') }}", style="color: #FFFFFF;">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#", style="color: #FFFFFF;">Sales
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ url_for('create_so') }}">Create Sale(s) Order</a></li>
+              <li><a href="#">Sale order list</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+</nav>

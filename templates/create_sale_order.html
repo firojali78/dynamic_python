@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    {% block content %}
+      <h1>This is the Sale page!</h1>
+      <input type="text" id="tags">
+
+      <script>
+        $( function() {
+          var availableTags = [
+              {% for language in languages %}
+                  "{{language}}",
+              {% endfor %}
+          ];
+          $( "#tags" ).autocomplete({
+            source: availableTags
+          });
+        } );
+      </script>
+
+    {% endblock %}
+  </body>
+</html>
