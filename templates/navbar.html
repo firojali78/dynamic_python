@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Navbar</title>
-</head>
-<body>
-<p>Hi</p>
-
-</body>
-</html>
+<nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Welcome to BodyCare Web Application - Distributor Portal</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sales
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ url_for('create_so') }}">Create Sale(s) Order</a></li>
+              <li><a href="#">Sale order list</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+</nav>
