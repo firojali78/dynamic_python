@@ -20,7 +20,9 @@ def visiting_card_details(name,designation,company_name,email,phone,website):
     print(name,designation,company_name,email,phone,website)
     return render_template("index.html", name= name, designation=designation,company_name=company_name,email=email,phone=phone,website=website)
 
-
+@app.route('/greet', methods=['GET'])
+def greet():
+    return jsonify("Hi there, please enter your name and details as per API")
 
 app.config["DEBUG"] = True
 
